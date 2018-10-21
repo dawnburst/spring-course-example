@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="gameRunner" class="game.GameRunner">
+    </bean>
+
+    <bean id="gameManagement" class="game.GameManagement">
+        <property name="numberOfTries" value="5"/>
+        <property name="gameRunner" ref="gameRunner" />
+    </bean>
+
+</beans>
